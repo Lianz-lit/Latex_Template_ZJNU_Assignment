@@ -7,7 +7,7 @@
 
 ## 模板下载
 
-* 已经上传至Overleaf模板，点击即用 ☞ [Overleaf](https://)
+* 已经上传至Overleaf模板，传送门 ☞ [Overleaf](https://)
 
 ## 使用方法
 默认模板文件由以下四部分组成：
