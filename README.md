@@ -1,10 +1,5 @@
-
 <h1 align="center">
   浙江师范大学研究生课程论文模板
-</h1>
-
-<h1 align="center">
-  Latex_Template_ZJNU_Assignment
 </h1>
 
 ## 介绍
