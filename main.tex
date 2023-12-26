@@ -1,0 +1,165 @@
+%!TeX program = xelatex
+\documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
+\usepackage{zjnureport}
+
+%%-------------------------------正文开始---------------------------%%
+\begin{document}
+
+%%-----------------------封面1--------------------%%
+\cover
+\thispagestyle{empty} % 首页不显示页码
+
+%%-----------------------封面2--------------------%%
+\newpage
+{说明：
+1、凡须记学分的研究生课程论文统一用此封面，新生入学时由各学院研究生秘书按需要统一发放；本封面也可在研究生院网站下载打印。
+
+
+2、所有类别研究生应在研究生课程结束后2周内将课程论文（有要求的课程）以A4纸打印，并与封面一起装订后交任课教师批改。
+
+
+3、课程名称、学科专业、学号等须按规范填写。
+
+
+4、开课时间：以学期开设的，填“**～**学年第*学期”；集中授课的，填实际授课时间“**年*月*日～**年*月*日”。
+
+
+5、封面除后三项由评阅教师填写外，其余由研究生本人填写。
+
+
+6、评阅教师应在课程结束后三周内批改完毕并将课程论文与成绩登记表一起交到各学院研究生秘书处，由研究生秘书统一保管。
+
+
+7、未使用本封面的课程论文一律作无效处理，研究生院不予承认学分。
+}
+\thispagestyle{empty} % 封面不显示页码
+
+%%-----------------------首页--------------------%%
+\newpage
+\setcounter{page}{1}
+%%可选择这里也放一个标题
+\begin{center}
+    \title{ \Huge \textbf{{浅析课程论文模板}}}
+\end{center}
+\maketitle
+\thispagestyle{plain} 
+% empty 没有页眉页脚；plain 没有页眉，页脚是居中的页码；
+% heading 没有页脚，页眉是章节名称的页码；
+% myheading 没有页脚，页眉是页码和用户自定义的内容。
+%%------------------摘要-------------%%
+\begin{cnabstract}
+本文
+\par \noindent \textbf{关键字: } 关键字1，关键字2，关键字3
+\end{cnabstract}
+\vspace{2em}
+\begin{enabstract}
+This
+\par \noindent \textbf{Keywords:} keyword1, keyword2, keyword3
+\end{enabstract}
+
+%%--------------------------目录页------------------------%%
+\clearpage
+\tableofcontents
+
+%%------------------------正文页从这里开始-------------------%
+\newpage
+\section{引言}
+\subsection{背景介绍}
+本模板主要适用于一些课程的平时论文以及期末论文，默认页边距为2.5cm，中文宋体，英文Times New Roman，字号为12pt（小四）。
+
+编译方式：\verb|xelatex -> bibtex -> xelatex*2|
+
+
+默认模板文件由以下四部分组成：
+\begin{itemize}
+    \item \texttt{main.tex} 主文件
+    \item \texttt{reference.bib} 参考文献，使用bibtex
+    \item \texttt{zjureport.sty} 文档格式控制，包括一些基础的设置，如页眉、标题、姓名等
+\end{itemize}
+
+第一次使用时需前往\texttt{zjnureport.sty} 对标题、姓名、学号、学院、页眉等进行设置
+
+默认带有封面页、首页以及目录页，页码从首页开始
+
+\section{一些插入功能}
+\subsection{插入公式}
+行内公式$v-\varepsilon+\phi=2$。
+
+插入行间公式如\autoref{Euler}：
+\begin{equation}
+    v-\varepsilon+\phi=2
+    \label{Euler}
+\end{equation}
+
+
+\subsection{插入文本框}
+本模板定义了一个圆角灰底的文本框，使用简化命令\verb|\tbox{}|即可，如果你不喜欢，可以前往 \texttt{ZJUReport.sty}对其进行修改。
+
+\tbox{
+    这是一个圆角灰底的文本框
+}
+
+\subsection{插入表格}
+本模板文件如\autoref{doc}所示。
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{l  | l}
+    \hline
+        文件名 & 说明 \\
+        \hline
+        \texttt{main.tex}  & 主文件 \\
+        \texttt{reference.bib} & 参考文献 \\
+        \texttt{ZJUReport.sty}  & 文档格式控制\\
+        \hline
+    \end{tabular}
+    \caption{本模板文件组成}
+    \label{doc}
+\end{table}
+
+%\section{定理环境}
+%\begin{Theorem}
+%\end{Theorem}
+%
+%\begin{Lemma}
+%\end{Lemma}
+%
+%\begin{Corollary}
+%\end{Corollary}
+%
+%\begin{Proposition}
+%\end{Proposition}
+%
+%\begin{Definition}
+%\end{Definition}
+%
+%\begin{Example}
+%\end{Example}
+%
+%\begin{proof}
+%\end{proof}
+
+\subsection{插入参考文献}
+直接使用\verb|\cite{}|即可。
+
+例如：
+
+
+   \textit{ 此处引用了文献\cite{0Isaac}。此处引用了文献\cite{2016The}}
+
+
+引用过的文献会自动出现在参考文献中。
+
+\section{写在最后}
+\subsection{发布地址}
+\begin{itemize}
+    \item Github: \url{https://github.com/Lianz-lit/Latex_Template_ZJNU_Assignment}
+    \item Overleaf:  \url{}
+\end{itemize}
+
+%%----------- 参考文献 -------------------%%
+%在reference.bib文件中填写参考文献，此处自动生成
+
+\reference
+
+
+\end{document}
